@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gradle-hello
+spec:
+  type: ClusterIP
+  selector:
+    app: gradle-hello
+  ports:
+    - targetPort: http-api
+      port: 80
